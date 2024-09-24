@@ -10,8 +10,8 @@ ParSt.b0 = 1;
 ParSt.am = -5; 
 ParSt.bm = 5;
 ParSt.p = 2;
-ParSt.ga = 10;
-ParSt.gb = 10;
+ParSt.ga = 1;
+ParSt.gb = 1;
 
 ParUnst.a0 = 0.5;
 ParUnst.b0 = 1;
@@ -20,9 +20,6 @@ ParUnst.bm = 5;
 ParUnst.p = 2;
 ParUnst.ga = 1;
 ParUnst.gb = 1;
-
-ka = (ParSt.am - ParSt.a0)/ParSt.b0
-kb = (ParSt.bm - ParSt.b0)/ParSt.b0
 
 sim('model.slx')
 figure
@@ -35,6 +32,4 @@ legend('plant','ref')
 figure
 hold on
 grid
-plot(ans.ka.time, ans.ka.signals.values)
-plot(ans.kb.time, ans.kb.signals.values)
-legend('k_{a}','k_{b}')
+plot(ans.ka.time, ans.ka.signals.)
